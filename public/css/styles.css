@@ -1,10 +1,9 @@
-h1 {
-  color: red;
-}
-
 /* General */
 * {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -63,7 +62,7 @@ header {
 #navbar {
   justify-content: space-between;
   background-color: #fff;
-  padding: 5px 0;
+  padding: 5px 10px;
 }
 
 #navbar a {

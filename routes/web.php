@@ -27,3 +27,9 @@ Route::get('/', function () {
 Route::get('/profile', function () {
   return view('profile');
 });
+
+Route::get('/product/{id?}', function ($id = null) {
+  $color = request('cor'); // query params
+
+  return view('product', ['id' => $id, 'color' => $color]);
+});
