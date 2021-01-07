@@ -13,16 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-  $nome = 'Thiago';
+use App\Http\Controllers\EventController;
 
-  $categories = ['jardinagem', 'eletrodomésticos', 'esportes', 'videogames'];
-
-  return view('welcome', [
-    'name' => $nome,
-    'categories' => $categories
-  ]);
-});
+Route::get('/', [EventController::class, 'index']);
+Route::get('/events/create', [EventController::class, 'create']);
 
 Route::get('/profile', function () {
   return view('profile');

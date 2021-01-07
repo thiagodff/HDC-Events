@@ -67,6 +67,9 @@
   <footer>
     <p>HDC Events &copy; 2021</p>
   </footer>
+
+  <!-- ICON PACK -->
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 </body>
 
 </html>
