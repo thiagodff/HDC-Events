@@ -149,14 +149,25 @@ header {
   padding: 30px;
 }
 
+#event-create-container form {
+  margin-top: 8px;
+}
+
 #event-create-container label {
   font-weight: bold;
+  margin-bottom: 4px;
 }
 
 #event-create-container input,
 #event-create-container select,
 #event-create-container textarea {
   font-size: 12px;
+  margin-bottom: 8px;
+  resize: none;
+}
+
+#event-create-container input[type="submit"] {
+  margin-top: 8px;
 }
 
 /* Event page */
