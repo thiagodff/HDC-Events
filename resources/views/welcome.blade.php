@@ -3,32 +3,30 @@
 @section('title', 'Home')
 
 @section('content')
-  <h1>Site do {{ $name }}</h1>
+  <div id="search-container" class="col-md-12">
+    <h1>Busque um evento</h1>
+    <form action="">
+      <input type="text" id="search" name="search" class="form-control" placeholder="procurar" />
+    </form>
+  </div>
 
-  <!-- <img src="/img/banner.jpg" alt="eventos presenciais"> -->
+  <div id="events-container" class="col-md-12">
+    <h2>Próximos Eventos</h2>
+    <p class="subtitle">Veja os eventos dos próximos dias</p>
 
-  @if(10 > 5)
-    <p>true</p>
-  @else
-    <p>false</p>
-  @endif
+    <div id="cards-container" class="row">
+      @foreach($events as $event)
+        <div class="card col-md3">
+          <img src="/img/event_placeholder.jpg" alt="{{ $event->title }}">
 
-  <ul>
-    @for($i = 0; $i < count($categories); $i++)
-      <li>{{ $categories[$i] }}</li>
-    @endfor
-  </ul>
-
-  <ul>
-    @foreach($categories as $category)
-      <li>{{ $loop->index}} - {{ $category }}</li>
-    @endforeach
-  </ul>
-
-  @php
-
-    echo $name
-  @endphp
-
-  {{-- Comentário --}}
+          <div class="card-body">
+            <p class="card-date">10/09/2021</p>
+            <h5 class="card-title">{{ $event->title }}</h5>
+            <p class="card-participantes">até 30 participantes</p>
+            <a href="#" class="btn btn-primary">Saber mais</a>
+          </div>
+        </div>
+      @endforeach
+    </div>
+  </div>
 @endsection
