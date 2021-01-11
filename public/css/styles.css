@@ -255,3 +255,8 @@ footer {
 footer p {
   margin-bottom: 0;
 }
+
+/* my adds */
+#event-create-container .label-infra {
+  font-weight: normal;
+}

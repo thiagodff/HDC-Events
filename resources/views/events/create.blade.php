@@ -42,6 +42,30 @@
         ></textarea>
       </div>
 
+      <div class="form-group infra-items">
+        <label for="title">Adicione itens de infraestrutura:</label>
+        <div class="form-group">
+          <input type="checkbox" name="items[]" id="cadeiras" value="Cadeiras">
+          <label class="label-infra" for="cadeiras">Cadeiras</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" name="items[]" id="stage" value="Palco">
+          <label class="label-infra" for="stage">Palco</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" name="items[]" id="beer" value="Cerveja grátis">
+          <label class="label-infra" for="beer">Cerveja grátis</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" name="items[]" id="food" value="Open Food">
+          <label class="label-infra" for="food">Open food</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" name="items[]" id="gifts" value="Brindes">
+          <label class="label-infra" for="gifts">Brindes</label>
+        </div>
+      </div>
+
       <input type="submit" value="Criar Evento" class="btn btn-primary">
     </form>
   </div>
