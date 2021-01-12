@@ -40,9 +40,7 @@
           <li class="nav-item">
             <form action="/logout" method="POST">
               @csrf
-              <a href="/logout"
-                class="nav-link"
-                onclick="event.preventDefault();
+              <a href="/logout" class="nav-link" onclick="event.preventDefault();
                 this.closest('form').submit();">
                 Sair
               </a>
@@ -66,7 +64,7 @@
     <div class="container-fluid">
       <div class="row">
         @if(session('msg'))
-          <p class="msg">{{ session('msg') }}</p>
+        <p class="msg">{{ session('msg') }}</p>
         @endif
         @yield('content')
       </div>
