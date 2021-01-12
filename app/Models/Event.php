@@ -17,6 +17,9 @@ class Event extends Model
     'date'
   ];
 
+  // fala que tudo que for enviado pelo POST pode ser atualizado sem restrição
+  protected $guarded = []; // o campo que eu colocar no [] o Laravel não deixa ser atualizado
+
   public function user()
   {
     return $this->belongsTo('App\Models\User');
