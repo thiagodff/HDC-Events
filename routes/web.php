@@ -29,6 +29,6 @@ Route::get('/profile', function () {
 
 Route::get('/dashboard', [EventController::class, 'dashboard'])->middleware('auth');
 
-// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-//   return view('dashboard');
-// })->name('dashboard');
+Route::post('/events/join/{id}', [EventController::class, 'joinEvent'])->middleware('auth');
+
+Route::delete('/events/leave/{id}', [EventController::class, 'leaveEvent'])->middleware('auth');
